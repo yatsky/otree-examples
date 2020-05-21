@@ -1,0 +1,8 @@
+* Likert Chart Example 🌟
+This app provides a quick example of how to create a Likert Chart in oTree.
+It also showcases a quick way to make many fields, as demonstrated in [[https://otree.readthedocs.io/en/latest/misc/tips_and_tricks.html#many-fields][oTree's documentation]].
+
+The questions are stored in ~questions.txt~.
+
+Under ~templates/personality~, there is a html template called ~Likert.html~ that can be [[https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#include][included]] in other templates. You can see that ~PersonalityTest.html~ simply runs ~{% include "./Likert.html" %}~. By doing this, you can have multiple sets of questions but they can all use the same Likert template.
+

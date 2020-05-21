@@ -1,0 +1,59 @@
+<style>
+ td .form-check-input {
+     width: 100%;
+     vertical-align: middle;
+ }
+
+ .form-check-input {
+     position: relative;
+     margin: 0 auto;
+ }
+
+ td p {
+     text-align: center;
+     vertical-align: middle;
+ }
+</style>
+<table class="table table-bordered table-striped">
+    {% for field in form %}
+        {% if forloop.counter0|divisibleby:"10"  %}
+            <tr>
+                <th></th>
+                <td class="font-weight-bold">
+                    <p>
+                        0 (Does not describe me well)
+                    </p>
+                </td>
+                <td class="font-weight-bold">
+                    <p>
+                        1
+                    </p>
+                </td>
+                <td class="font-weight-bold">
+                    <p>
+                        2
+                    </p>
+                </td>
+                <td class="font-weight-bold">
+                    <p>
+                        3
+                    </p>
+                </td>
+                <td class="font-weight-bold">
+                    <p>
+                        4 (Describe me very well)
+                    </p>
+                </td>
+            </tr>
+        {% endif %}
+        <tr>
+            <td>{{ field.label }}</td>
+            {% for choice in field %}
+                <td>{{ choice.tag }}</td>
+            {% endfor %}
+
+        </tr>
+
+    {% endfor %}
+
+</table>

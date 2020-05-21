@@ -1,0 +1,2 @@
+* Introduction
+Some typical and fancy usages of oTree to be recorded here as examples that are useful for other people that might run into the same problems in the future ☺.

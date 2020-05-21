@@ -1,2 +1,5 @@
 * Introduction
 Some typical and fancy usages of oTree to be recorded here as examples that are useful for other people that might run into the same problems in the future ☺.
+* Special note
+The ~SECRET_KEY~ of this project is deliberately left in the ~settings.py~ file as this project will not be used in production.
+Please do NOT do this when you choose to host your projects on GitHub publicly 🚫. Mask it with something like ~SECRET_KEY=environ.get("SECRET_KEY")~.

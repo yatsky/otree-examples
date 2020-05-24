@@ -1,0 +1,35 @@
+* Introduction
+This app gives a very simple example on how to create multiple-choice multiple-answer fields (mcma fields).
+
+The ~models.py~ imports a ~CheckboxSelectMultiple~ widget directly from the Django library and uses it to create a field.
+You can follow the same step in creating other fields. Please note that the options you provide for ~choices~ must be a pair of values, e.g. ~("This is awesome!", "This is awesome!")~ in the ~love_this~ field. You cannot just use ~("This is awesome!")~ like you usually would with oTree. After all, we are sort of hacking oTree here.
+
+It is OK if you put other fields with mcma fields together on the same page, and the order of the fields does not matter. You can just put the fields you need in the ~form_fields~ for the page like the one in this example:
+#+begin_src python
+class MyPage(Page):
+    form_model = 'player'
+    # Put any other fields in here
+    # and it works fine.
+    form_fields = ['love_this']
+#+end_src
+
+The only extra step is that you need to copy the following code to the page templates that you intend to put mcma fields on. If you are not clear, check out the example in ~MyPage.html~ in this app's template.
+#+begin_src html
+{% block scripts %}
+    <script>
+    $(".form-check ul").each(function(index, e){
+        $(this).detach().appendTo($(".form-check")[index]);
+    });
+    </script>
+{% endblock %}
+
+{% block styles %}
+    <style type="text/css">
+    .form-check{
+        padding-left: 0;
+    }
+    </style>
+{% endblock %}
+#+end_src
+
+The above code just prettifies the output of mcma fields.

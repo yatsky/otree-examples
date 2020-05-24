@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    The things you chose...
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        You chose:
+    </p>
+    <p>
+        {{ player.love_this }}
+    </p>
+    
+    {% next_button %}
+{% endblock %}
+
+

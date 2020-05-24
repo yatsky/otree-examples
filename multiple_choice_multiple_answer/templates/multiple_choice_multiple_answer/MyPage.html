@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    You can choose many answers!
+{% endblock %}
+
+{% block content %}
+
+    {% formfields %}
+    {% next_button %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+     $(".form-check ul").each(function(index, e){
+         $(this).detach().appendTo($(".form-check")[index]);
+     });
+    </script>
+{% endblock %}
+
+{% block styles %}
+    <style type="text/css">
+     .form-check{
+         padding-left: 0;
+     }
+    </style>
+{% endblock %}

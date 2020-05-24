@@ -16,6 +16,12 @@ SESSION_CONFIGS = [
         num_demo_participants=1,
         app_sequence=['personality'],
     ),
+    dict(
+        name='multiple_choice_multiple_answer',
+        display_name="Multiple-choice Multiple-answer",
+        num_demo_participants=1,
+        app_sequence=['multiple_choice_multiple_answer'],
+    ),
 ]
 
 

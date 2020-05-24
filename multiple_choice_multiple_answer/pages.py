@@ -5,6 +5,8 @@ from .models import Constants
 
 class MyPage(Page):
     form_model = 'player'
+    # Put any other fields in here
+    # and it works fine.
     form_fields = ['love_this']
 
 

@@ -33,3 +33,7 @@ The only extra step is that you need to copy the following code to the page temp
 #+end_src
 
 The above code just prettifies the output of mcma fields.
+
+The data recorded by the ~love_this~ field will be something like this ~['Great!', 'I love this!', "Don't like it (really?💣)"]~
+
+This looks a bit strange, and seems like a list. Again, we are sort of hacking here so something strange is kind of expected. You just need to make sure that you are aware of this and try not to use csv file when downloading your data. Use Excel files instead and then preprocess your data. Maybe replace the commas in the ~love_this~ column with semicolons.

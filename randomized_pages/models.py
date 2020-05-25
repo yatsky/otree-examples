@@ -8,12 +8,13 @@ from otree.api import (
     Currency as c,
     currency_range,
 )
+import json
+from random import shuffle
 
-
-author = 'Your name here'
+author = 'Yaoni'
 
 doc = """
-Your app description
+Randomized pages
 """
 
 
@@ -24,7 +25,14 @@ class Constants(BaseConstants):
 
 
 class Subsession(BaseSubsession):
-    pass
+    def creating_session(self):
+        from .pages import initial_page_sequence
+
+        page_names = [i.__name__ for i in initial_page_sequence]
+        for p in self.get_players():
+            pb = page_names.copy()
+            shuffle(pb)
+            p.page_sequence = json.dumps(pb)
 
 
 class Group(BaseGroup):
@@ -32,4 +40,16 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    pass
+    page_sequence = models.StringField()
+    q1 = models.BooleanField(
+        label="This is the first question. Is it on the first page?",
+        widget=widgets.RadioSelectHorizontal,
+    )
+    q2 = models.BooleanField(
+        label="This is the second question. Is it on the second page?",
+        widget=widgets.RadioSelectHorizontal,
+    )
+    q3 = models.BooleanField(
+        label="This is the third question. Is it on the third page?",
+        widget=widgets.RadioSelectHorizontal,
+    )

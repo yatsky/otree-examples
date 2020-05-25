@@ -2,11 +2,12 @@
 {% load otree static %}
 
 {% block title %}
-    Page title
+    Your page sequence
 {% endblock %}
 
 {% block content %}
 
+    {{ player.page_sequence }}
     {% next_button %}
 {% endblock %}
 

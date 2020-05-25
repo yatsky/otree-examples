@@ -22,6 +22,12 @@ SESSION_CONFIGS = [
         num_demo_participants=1,
         app_sequence=['multiple_choice_multiple_answer'],
     ),
+    dict(
+        name='randomized_pages',
+        display_name="Randomized Pages",
+        num_demo_participants=1,
+        app_sequence=['randomized_pages'],
+    ),
 ]
 
 

@@ -1,4 +1,4 @@
-* Introduction
+* Introduction 💠
 This app demonstrates how to create randomized pages. 
 The code was provided by Phillipp Chapkovski, but I was not able to find the old thread on Google Forum.
 If you have the link to the thread, please let me know and I will put it here.

@@ -19,31 +19,13 @@
         {% if forloop.counter0|divisibleby:"10"  %}
             <tr>
                 <th></th>
+                {% for k, choice in Constants.choices_map.items %}
                 <td class="font-weight-bold">
                     <p>
-                        0 (Does not describe me well)
+                        {{ choice }}
                     </p>
                 </td>
-                <td class="font-weight-bold">
-                    <p>
-                        1
-                    </p>
-                </td>
-                <td class="font-weight-bold">
-                    <p>
-                        2
-                    </p>
-                </td>
-                <td class="font-weight-bold">
-                    <p>
-                        3
-                    </p>
-                </td>
-                <td class="font-weight-bold">
-                    <p>
-                        4 (Describe me very well)
-                    </p>
-                </td>
+                {% endfor %}
             </tr>
         {% endif %}
         <tr>

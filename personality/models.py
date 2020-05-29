@@ -8,6 +8,7 @@ from otree.api import (
     Currency as c,
     currency_range,
 )
+from collections import OrderedDict
 
 
 author = "Yaoni Wang"
@@ -25,13 +26,15 @@ class Constants(BaseConstants):
     with open(name_in_url + "/questions.txt") as f:
         questions = f.readlines()
 
-    choices_map = {
-        0: "Does not describe me well",
-        1: "1",
-        2: "2",
-        3: "3",
-        4: "Describe me very well",
-    }
+    choices_map = OrderedDict(
+        (
+            (0, "Does not describe me well"),
+            (1, "1"),
+            (2, "2"),
+            (3, "3"),
+            (4, "Describe me very well"),
+        )
+    )
 
 
 class Subsession(BaseSubsession):

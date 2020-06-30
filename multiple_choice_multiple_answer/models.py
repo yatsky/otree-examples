@@ -10,6 +10,7 @@ from otree.api import (
 )
 
 from django.forms.widgets import CheckboxSelectMultiple
+import re
 
 author = 'Yaoni'
 
@@ -22,6 +23,8 @@ class Constants(BaseConstants):
     name_in_url = 'multiple_choice_multiple_answer'
     players_per_group = None
     num_rounds = 1
+
+    love_this_answer = ["This is awesome!", "I love this!"]
 
 
 class Subsession(BaseSubsession):
@@ -47,3 +50,16 @@ class Player(BasePlayer):
             )
         ),
     )
+
+    def love_this_error_message(self, val):
+        temp = val
+        for ans in Constants.love_this_answer:
+            temp = temp.replace(ans, "")
+
+        # After removing all correct answers from val,
+        # we should expect there to be no word character in the result
+        # If we still find any word character, then this must be
+        # coming from wrong answers.
+        pattern = re.compile("\w")
+        if pattern.search(temp):
+            return "Correct answers: {}".format(Constants.love_this_answer)

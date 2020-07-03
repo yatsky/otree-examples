@@ -28,6 +28,12 @@ SESSION_CONFIGS = [
         num_demo_participants=1,
         app_sequence=['randomized_pages'],
     ),
+    dict(
+        name='cycling_treatments',
+        display_name="Cycling Treatments",
+        num_demo_participants=4,
+        app_sequence=['cycling_treatments'],
+    ),
 ]
 
 

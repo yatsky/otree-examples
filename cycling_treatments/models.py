@@ -57,6 +57,6 @@ class Player(BasePlayer):
 
     def set_treatment(self):
         if self.round_number == 1:
-            self.treatment = self.session.vars['treatments'].pop().name
+            self.treatment = self.session.vars['treatments'].pop(0).name
         else:
             self.treatment = self.in_round(1).treatment

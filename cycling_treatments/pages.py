@@ -4,7 +4,10 @@ from .models import Constants
 
 
 class MyPage(Page):
-    pass
+    timeout_seconds = 1
+
+    def before_next_page(self):
+        self.player.set_treatment()
 
 
 class ResultsWaitPage(WaitPage):
@@ -15,4 +18,4 @@ class Results(Page):
     pass
 
 
-page_sequence = [MyPage, ResultsWaitPage, Results]
+page_sequence = [MyPage]

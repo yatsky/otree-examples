@@ -1,0 +1,9 @@
+* Introduction
+A request was submitted to me that the researchers want to
+/cycle treatments/ during the experiment based on the the order of participants joining the experiment.
+
+Simply put, assuming 4 treatments in total, we give out the room link to the participants
+and the first one clicking the link will be in treatment 1, second in treatment 2, third in treatment 3 and fourth in treatment 4.
+The fifth participant clicking the link will be in treatment 1 again and the cycling continues.
+
+This is to help us get roughly the same number of observations for each treatment in one go.

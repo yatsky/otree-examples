@@ -1,0 +1,3 @@
+* Introduction 🐇
+Here I provide a more gentle (new-user-friendly) approach to program an app with randomized pages, compared to the one provided [[file:../randomized_pages/README.org][here]].
+

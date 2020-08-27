@@ -34,6 +34,12 @@ SESSION_CONFIGS = [
         num_demo_participants=4,
         app_sequence=['cycling_treatments'],
     ),
+    dict(
+        name='easier_randomized_pages',
+        display_name="Easier randomized pages",
+        num_demo_participants=1,
+        app_sequence=['easier_randomized_pages'],
+    ),
 ]
 
 

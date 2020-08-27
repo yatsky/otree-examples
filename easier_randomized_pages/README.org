@@ -40,7 +40,7 @@ Let's suppose that we want to randomize the pages on a *Player* level, which mea
 We start in our ~models.py~.
 #+begin_src python
 # models.py
-# other code no included
+# other code not included
 
 from random import shuffle
 

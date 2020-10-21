@@ -50,8 +50,6 @@ jobs:
         subject: Github Actions job result
         # Literal body:
         body: Build job of ${{github.repository}} completed successfully!
-        # Read file contents as body:
-        body: file://README.org
         to: y.wang7@uq.net.au
         from: ${{secrets.MAIL_USERNAME}}# <user@example.com>
         # Optional content type (defaults to text/plain):
